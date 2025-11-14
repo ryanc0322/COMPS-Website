@@ -95,3 +95,6 @@ img#background {
       text-align: left;
   }
 }
+
+/* Ensure headings are visible on white content boxes */
+.box h1 { color: #333; }
