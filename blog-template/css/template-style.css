@@ -1,5 +1,5 @@
 body {
-    background: none repeat scroll 0 0 #252D30;
+    background: #ffffff;
 }
 .logo-box {
     background: none repeat scroll 0 0 #252D30;
@@ -75,15 +75,9 @@ article hr {
     visibility: hidden;
 }
 #content-wrapper {
-    background: none repeat scroll 0 0 #252D30;
+    background: transparent;
 }
-img#background {
-    height: auto;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -10;
-}
+img#background { display: none; }
 .footer {
     background: none repeat scroll 0 0 #E0E0E0;
 }
@@ -98,3 +92,17 @@ img#background {
 
 /* Ensure headings are visible on white content boxes */
 .box h1 { color: #333; }
+
+/* Make left sidebar span full viewport height on large screens */
+@media screen and (min-width: 769px) {
+    .sidebar-col {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: #252D30; /* match sidebar theme */
+    }
+    .aside-nav {
+        flex: 1 1 auto; /* stretch to fill remaining height under logo */
+        background: #252D30; /* ensure contiguous background */
+    }
+}
