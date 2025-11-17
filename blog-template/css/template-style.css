@@ -1,5 +1,6 @@
 body {
-    background: #ffffff;
+    background: #ffffff url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 .logo-box {
     background: none repeat scroll 0 0 #252D30;
