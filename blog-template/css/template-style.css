@@ -90,10 +90,8 @@ img#background { display: none; }
   }
 }
 
-/* Ensure headings are visible on white content boxes */
 .box h1 { color: #333; }
 
-/* Make left sidebar span full viewport height on large screens */
 @media screen and (min-width: 769px) {
     .sidebar-col {
         position: sticky;
@@ -101,10 +99,10 @@ img#background { display: none; }
         height: 100vh;
         display: flex;
         flex-direction: column;
-        background: #252D30; /* match sidebar theme */
+        background: #252D30; 
     }
     .aside-nav {
-        flex: 1 1 auto; /* stretch to fill remaining height under logo */
-        background: #252D30; /* ensure contiguous background */
+        flex: 1 1 auto; 
+        background: #252D30; 
     }
 }
