@@ -3,11 +3,11 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Free responsive blog template</title>
+      <title>Functions Assignment</title>
       <link rel="stylesheet" href="css/components.css">
       <link rel="stylesheet" href="css/icons.css">
-      <link rel="stylesheet" href="css/responsee.css"> 
-      <!-- CUSTOM STYLE -->
+      <link rel="stylesheet" href="css/responsee.css">
+      <!-- CUSTOM STYLE --> 
       <link rel="stylesheet" href="css/template-style.css"> 
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
       <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
@@ -36,50 +36,193 @@
                   <!-- HEADER -->     
                   <div class="line">
                      <section>
-                        <h2>Contact us</h2>
-                        <div class="line">
-                           <form class="customform" action="">
-                              <div class="line">
-                                 <div class="margin">
-                                    <div class="s-12 l-4">
-                                       <select form="select" name="">
-                                          <option value="first">First</option>
-                                          <option value="second">Second</option>
-                                          <option value="third">Third</option>
-                                          <option value="fourth">Fourth</option>
-                                       </select>
-                                    </div>
-                                    <div class="s-12 l-4"><input name="" placeholder="Your e-mail" title="Your e-mail" type="text" /></div>
-                                    <div class="s-12 l-4"><input name="" title="Choose ..." type="file" /></div>
-                                 </div>
+                        <div class="margin">
+                           <div class="s-12 margin-bottom">
+                              <h1>Take Home Assignment</h1>
+                              <h2>Functions</h2>
+                              
+                              <h3>Learning Objectives</h3>
+                              <p>Practice and reinforce knowledge of:</p>
+                              <ul>
+                                 <li>Type usage</li>
+                                 <li>Good programming practice</li>
+                                 <li>Conditionals (if/else)</li>
+                                 <li>Loops (for/while)</li>
+                                 <li>Booleans and logical operators (&lt;, &gt;, ==, !=)</li>
+                                 <li>Loop iteration and control (break/continue/else)</li>
+                              </ul>
+                              
+                              <h3>Part 0: Set-Up & Introduction</h3>
+                              <p>For this assignment, you will implement ideas discussed in class using conditionals and loops. You are a loan manager automating the loan approval process. You will design a point system based on applicant information such as employment, income, debts, and assets. Some starter code is provided, including both ethical and unethical examples.</p>
+                              
+                              <p>Starter code includes functions for input validation, loops, and conditionals. You will:</p>
+                              <ul>
+                                 <li>Implement and refine input functions for applicant data.</li>
+                                 <li>Use loops and conditionals to validate and process input.</li>
+                                 <li>Design a point system that fairly evaluates applicants.</li>
+                                 <li>Add comments explaining your logic and ethical considerations.</li>
+                              </ul>
+                              
+                              <h4>Notes and Advice</h4>
+                              <ul>
+                                 <li>Use appropriate conditionals and logical operators for thresholds and binary choices.</li>
+                                 <li>Use loops for repeated input and validation.</li>
+                                 <li>Use loop control statements (break, continue, else) to manage flow.</li>
+                                 <li>Print variables for debugging as needed.</li>
+                                 <li>Avoid infinite loops; use clear end conditions.</li>
+                                 <li>If stuck in a loop, use Ctrl+C (or Command+C on Mac) to stop execution.</li>
+                              </ul>
+                              
+                              <h3>Part 1: File Description</h3>
+                              <p>You will work with the loanApproval files:</p>
+                              
+                              <div style="margin: 20px 0;">
+                                 <h4>loanApproval_bad.py</h4>
+                                 <p>An unethical, oversimplified system. It asks for basic info (name, age, gender, employment, address) and makes decisions based on discriminatory or irrelevant criteria. It demonstrates what not to do.</p>
                               </div>
-                              <div class="s-12"><textarea placeholder="Your message" name="" rows="5"></textarea></div>
-                              <div class="line">
-                                 <div class="margin">
-                                    <div class="s-12 l-6">
-                                       <input name="" value="" checked="checked" type="radio" /><label>Radio Button 1</label><br />
-                                       <input name="" value="" type="radio" /><label>Radio Button 2</label><br />
-                                       <input name="" value="" disabled="disabled" type="radio" /><label>Radio Button 3 (disabled)</label><br />
-                                       <input name="" value="" type="checkbox" /><label>Checkbox 1</label><br />
-                                       <input name="" value="" type="checkbox" /><label>Checkbox 2</label><br />
-                                       <input checked="checked" disabled="disabled" name="" value="" type="checkbox" /><label>Checkbox 3 (disabled)</label>
-                                    </div>
-                                    <div class="s-12 l-6">
-                                       <p><label>Multiple Select:</label></p>
-                                       <select form="select" multiple="multiple" name="">
-                                          <option value="first">First</option>
-                                          <option value="second">Second</option>
-                                          <option value="third">Third</option>
-                                          <option value="fourth">Fourth</option>
-                                       </select>
-                                    </div>
-                                 </div>
+                              
+                              <div style="margin: 20px 0;">
+                                 <h4>loanApproval_mediocre.py</h4>
+                                 <p>A binary (yes/no) system. It asks about employment, job stability, income, loans, and assets, but only as yes/no questions. It lacks nuance and does not use ranges or point systems.</p>
                               </div>
-                              <div class="s-12 l-2 right"><button type="submit">Submit Button</button></div>
-                           </form>
+                              
+                              <div style="margin: 20px 0;">
+                                 <h4>loanApproval_better.py</h4>
+                                 <p>Uses ranges and collects more detailed info. It asks for specific amounts for income, debts, and assets, storing them in arrays. It uses loops and input validation, but still has room for improvement in precision and fairness.</p>
+                              </div>
+                              
+                              <div style="margin: 20px 0;">
+                                 <h4>loanApproval_good.py</h4>
+                                 <p>Implements a points-based system. Points are added or subtracted based on salary, additional income, debts, and property value, using thresholds and ranges. The approval decision is based on the total score.</p>
+                              </div>
+                              
+                              <p>You will review and modify these files, improving the criteria and logic for loan approval. The code should use variables for job stability, monthly income, previous loans, outstanding debts, and property value, with each factor affecting the approval score. The program should print the approval status and points, and include comments explaining your choices.</p>
+                              
+                              <h3>Part 2: Reflection</h3>
+                              <p>For the last part of this assignment you will write a short reflection (~1 page), going over your thought process working through the assignment, areas of strength and weaknesses, and 1 paragraph reflecting on the ethical considerations of your program and how the choices you made with your algorithm reflect those choices. As a programmer, try to be conscious of all the assumptions you are making about the user for your program. You are free to include potential areas of improvement for making your algorithm more encompassing or fair as well in that paragraph. While this reflection will not be graded for writing quality, please try to use at least a semi-formal writing style and tone. This is an essential part of the assignment so please don't forget to include it in your submissions.</p>
+                              
+                              <h3>Grading Rubric</h3>
+                              <table style="border-collapse: collapse; width: 100%; margin: 20px 0;">
+                                 <tr style="background-color: #f0f0f0;">
+                                    <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Criteria</th>
+                                    <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Proficient</th>
+                                    <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Exemplary</th>
+                                 </tr>
+                                 <tr>
+                                    <td style="border: 1px solid #ddd; padding: 12px; font-weight: bold;">Logic</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px;">
+                                       <ul>
+                                          <li>Passes all of the pytests</li>
+                                          <li>Uses while loops and for loops in appropriate areas</li>
+                                          <li>Uses if and elif and else in appropriate areas</li>
+                                       </ul>
+                                    </td>
+                                    <td style="border: 1px solid #ddd; padding: 12px;">
+                                       <ul>
+                                          <li>Meets all the Proficient requirements</li>
+                                          <li>No unnecessary/extraneous code</li>
+                                          <li>Removed commented out code</li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                                 <tr style="background-color: #f9f9f9;">
+                                    <td style="border: 1px solid #ddd; padding: 12px; font-weight: bold;">Style</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px;">
+                                       <ul>
+                                          <li>Passes pylint</li>
+                                          <li>Has comments</li>
+                                          <li>Variable names are relevant to the code</li>
+                                          <li>The questions and error messages being asked of the users indicate what response is being desired</li>
+                                          <li><em>Ex: How much debt do you have? :</em></li>
+                                       </ul>
+                                    </td>
+                                    <td style="border: 1px solid #ddd; padding: 12px;">
+                                       <ul>
+                                          <li>Meets all the Proficient requirements</li>
+                                          <li>Comments are descriptive and help improve legibility of the code</li>
+                                          <li>The questions and error messages are clear and explicit</li>
+                                          <li>Currency of the response is clarified</li>
+                                          <li>The sources of income or debt are specified</li>
+                                          <li>Error messages specify what is needed (positive numerical value)</li>
+                                          <li><em>Ex: Enter your cost of debt for {source} (USD):</em></li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td style="border: 1px solid #ddd; padding: 12px; font-weight: bold;">Reflection</td>
+                                    <td style="border: 1px solid #ddd; padding: 12px;">
+                                       <ul>
+                                          <li>The student responded to all of the required questions</li>
+                                          <li>Responses are written in complete sentences</li>
+                                          <li>The responses meet the length requirements</li>
+                                       </ul>
+                                    </td>
+                                    <td style="border: 1px solid #ddd; padding: 12px;">
+                                       <ul>
+                                          <li>Meets all the Proficient requirements</li>
+                                          <li>The responses are thoughtful and clear in their connections</li>
+                                          <li>There is a clear structure to the answers and they are coherent when read</li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                              </table>
+
+                              <hr />
+
+                              <h1>In Class Assignment</h1>
+
+                              <h3>Learning Objectives</h3>
+                              <p>Understand and apply:</p>
+                              <ul>
+                                 <li>Conditional statements (if, elif, else)</li>
+                                 <li>Comparison and logical operators</li>
+                                 <li>For and while loops</li>
+                                 <li>Loop control (break, continue, else)</li>
+                                 <li>Input validation and user interaction</li>
+                                 <li>Writing clear, fair, and non-biased code</li>
+                              </ul>
+
+                              <h3>File Descriptions</h3>
+
+                              <div style="margin: 20px 0;">
+                                 <h4>(conditionals.py)</h4>
+                                 <p>Demonstrates the use of conditional statements, such as if, elif, and else statements.</p>
+                                 <p><strong>Content:</strong></p>
+                                 <ul>
+                                    <li>Simple conditions (e.g., temperature check)</li>
+                                    <li>If-else for eligibility (e.g., voting age)</li>
+                                    <li>If-elif-else chains (e.g., grading)</li>
+                                    <li>Reflection prompts on fairness and bias in the context of using conditional logic</li>
+                                    <li>Activities for classifying numbers, age categories, and weather with health advice</li>
+                                    <li>Introduces comparison and logical operators (and, or), and nested conditions.</li>
+                                 </ul>
+                              </div>
+
+                              <div style="margin: 20px 0;">
+                                 <h4>(loops.py)</h4>
+                                 <p>Demonstrates the use of for and while loops.</p>
+                                 <p><strong>Content:</strong></p>
+                                 <ul>
+                                    <li>For loops for counting, iterating lists, and summing integers</li>
+                                    <li>Reflection on the impact of automation and fairness in loops</li>
+                                    <li>Activities for practicing for loops (number ranges, list iteration, summing, even numbers)</li>
+                                    <li>While loops for countdowns, input validation, and condition-based repetition</li>
+                                    <li>Discussion of infinite loops and safe loop termination</li>
+                                 </ul>
+                              </div>
+
+                              <div style="margin: 20px 0;">
+                                 <h4>(loops_conditionals_worksheet.py)</h4>
+                                 <p>Provides practice problems combining loops and conditionals.</p>
+                                 <p><strong>Includes:</strong></p>
+                                 <ul>
+                                    <li>Basic conditional exercises (positive/negative/zero, age categories, even/odd, password check, etc.)</li>
+                                    <li>Basic loop exercises (counting, even numbers, multiplication tables, countdowns)</li>
+                                    <li>Designed for hands-on practice and reinforcing concepts from the other files.</li>
+                                 </ul>
+                              </div>
+                           </div>
                         </div>
-                        <h2>Where to find us</h2>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d682836.3989558156!2d17.37409575628268!3d48.04597187506327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c89360aca6197%3A0x631f9b82fd884368!2sBratislava!5e0!3m2!1sen!2s!4v1396786858643" width="100%" height="450" frameborder="0" style="border:0"></iframe>
                      </section>
                   </div>
                </div>
@@ -87,10 +230,10 @@
                <div class="box footer">
                   <footer class="line">
                      <div class="s-12 l-6">
-                        <p>Copyright 2019, Vision Design - graphic zoo<br />The background image is purchased from Depositphotos. Do not use the image in your website.</p>
+                        <p>Computer Science Assignment - Functions<br />Due Date: Please check course syllabus for submission deadlines.</p>
                      </div>
                      <div class="s-12 l-6">
-                        <a class="right" href="http://www.myresponsee.com" title="Responsee - lightweight responsive framework">Design and coding by Responsee Team</a>
+                        <a class="right" href="#" title="Assignment Guidelines">Assignment Resources</a>
                      </div>
                   </footer>
                </div>
