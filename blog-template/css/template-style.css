@@ -96,7 +96,9 @@ img#background { display: none; }
 /* Make left sidebar span full viewport height on large screens */
 @media screen and (min-width: 769px) {
     .sidebar-col {
-        min-height: 100vh;
+        position: sticky;
+        top: 0;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         background: #252D30; /* match sidebar theme */
