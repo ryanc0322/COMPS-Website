@@ -12,7 +12,7 @@
 }
 body {
   background:none repeat scroll 0 0 #eeeeee;
-  font-size:16px;
+  font-size:15px;
   font-family:"Open Sans",Arial,sans-serif;
   color:#444;
 }
@@ -23,7 +23,7 @@ h1,h2,h3,h4,h5,h6 {
   margin:0.5rem 0;  
 }
 h1 {font-size:2.7rem;}
-h2 {font-size:2.2rem;}  
+h2 {font-size:1.8rem;}  
 h3 {font-size:1.8rem;}  
 h4 {font-size:1.4rem;}  
 h5 {font-size:1.1rem;}  
