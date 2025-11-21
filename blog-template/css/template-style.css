@@ -1,13 +1,18 @@
 body {
-    background: #ffffff url('../img/background.jpg') no-repeat center center fixed;
+    background: #ffffff no-repeat center center fixed;
     background-size: cover;
 }
+
+html, body {
+    overflow-x: hidden;
+}
+
 .logo-box {
-    background: none repeat scroll 0 0 #252D30;
+    background: none repeat scroll 0 0 #324f6f;
     display: block;
     padding: 1.25em;
     width: 100%;
-    border-bottom: 1px solid #151E1F;
+    border-bottom: 1px solid #243a52;
 }
 h1 {
     color: #FFFFFF;
@@ -18,20 +23,21 @@ h1 {
     text-transform: none;
 }
 .aside-nav ul {
-    background: none repeat scroll 0 0 #252D30;
+    background: none repeat scroll 0 0  #324f6f;
 }
 .aside-nav li a {
-    border-bottom: 1px solid #151E1F;
+    border-bottom: 1px solid #243a52; 
     color: #FFFFFF;
+    padding: 0.75rem 1.25rem;
 }
 .aside-nav li a:link, .aside-nav li a:visited {
     color: #FFFFFF;
 }
 .aside-nav li > ul,.aside-nav li ul ul {
-    background: none repeat scroll 0 0 #151E1F;
+    background: none repeat scroll 0 0 #243a52;
 }
 .top-nav li a:hover, .aside-nav li a:hover,.aside-nav > ul > li.active-item > a:link, .aside-nav > ul > li.active-item > a:visited {
-    background: none repeat scroll 0 0 #181F22;
+    background: none repeat scroll 0 0 #243a52;
 }
 i {
     color: #E36132;
@@ -96,15 +102,68 @@ img#background { display: none; }
 
 @media screen and (min-width: 769px) {
     .sidebar-col {
-        position: sticky;
+        position: fixed;
+        left: 0;
         top: 0;
         height: 100vh;
+        width: 21%;
         display: flex;
         flex-direction: column;
-        background: #252D30; 
+        background: #324f6f; 
+        padding-left: 0;
+        z-index: 10;
     }
     .aside-nav {
         flex: 1 1 auto; 
-        background: #252D30; 
+        background: #324f6f; 
+    }
+
+    .logo-box { padding-left: 1.5rem; }
+    .aside-nav li a {
+        display: block;
+        box-sizing: border-box;
+        padding-left: 1.5rem !important;
+    }
+
+    .content-col {
+        min-height: 100vh;
+        background: #ffffff;
+        position: relative;
+        z-index: 1;
+    }
+
+    .line > #content-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .sidebar-col {
+        width: 21%;
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    .content-col {
+        flex: 1 1 auto;
+        padding: 0;
+        min-height: 100vh;
+        margin-left: 21%; 
+    }
+
+    .content-col .box {
+        background: transparent;
+        padding: 1.25rem 3rem 1.25rem 1.25rem;
+    }
+
+    .size-1140.align-content-left .line,
+    .size-1280.align-content-left .line,
+    .size-1520.align-content-left .line {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
