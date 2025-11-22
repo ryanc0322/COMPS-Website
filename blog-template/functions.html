@@ -3,10 +3,10 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Functions Assignment</title>
+      <title>Dataset</title>
       <link rel="stylesheet" href="css/components.css">
       <link rel="stylesheet" href="css/icons.css">
-      <link rel="stylesheet" href="css/responsee.css">
+      <link rel="stylesheet" href="css/responsee.css"> 
       <!-- CUSTOM STYLE --> 
       <link rel="stylesheet" href="css/template-style.css"> 
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -27,8 +27,8 @@
                      <li><a href="project-overview.html"><i class="icon-globe"></i>Project Overview</a></li>
                      <li><a href="basics.html"><i class="icon-sli-calculator"></i>Basics</a></li>
                      <li><a href="conditionals-loops.html"><i class="icon-sli-wallet"></i></i>Conditionals & Loops</a></li>
-                     <li><a href="dataset.html"><i class="icon-sli-graph"></i>Datasets</a></li>
-                     <li class="active-item"><a href="functions.html"><i class="icon-sli-handbag"></i>Functions</a></li>
+                     <li class="active-item"><a href="dataset.html"><i class="icon-sli-graph"></i>Datasets</a></li>
+                     <li><a href="functions.html"><i class="icon-sli-handbag"></i>Functions</a></li>
                      <li><a href="test-suite.html"><i class="icon-check"></i>Test Suite</a></li>
                   </ul>
                </div>
@@ -39,191 +39,61 @@
                   <!-- HEADER -->     
                   <div class="line">
                      <section>
-                        <div class="margin">
-                           <div class="s-12 margin-bottom">
-                              <h1>Take Home Assignment</h1>
-                              <h2>Functions</h2>
-                              
-                              <h3>Learning Objectives</h3>
-                              <p>Practice and reinforce knowledge of:</p>
-                              <ul>
-                                 <li>Understand the purpose of functions</li>
-                                 <li>Practice implementing and using functions</li>
-                                 <li>Ensure accuracy when implementing logic for financial transactions</li>
-                                 <li>Reflect on predatory practices built into online shopping platforms</li>
-                              </ul>
-                              
-                              <h3>Part 0: Getting Started</h3>
-                              <p>For this assignment, you will implement ideas discussed in class using conditionals and loops. You are a loan manager automating the loan approval process. You will design a point system based on applicant information such as employment, income, debts, and assets. Some starter code is provided, including both ethical and unethical examples.</p>
-                              
-                              <p>Starter code includes functions for input validation, loops, and conditionals. You will:</p>
-                              <ul>
-                                 <li>Implement and refine input functions for applicant data.</li>
-                                 <li>Use loops and conditionals to validate and process input.</li>
-                                 <li>Design a point system that fairly evaluates applicants.</li>
-                                 <li>Add comments explaining your logic and ethical considerations.</li>
-                              </ul>
-                              
-                              <h4>Notes and Advice</h4>
-                              <ul>
-                                 <li>Use appropriate conditionals and logical operators for thresholds and binary choices.</li>
-                                 <li>Use loops for repeated input and validation.</li>
-                                 <li>Use loop control statements (break, continue, else) to manage flow.</li>
-                                 <li>Print variables for debugging as needed.</li>
-                                 <li>Avoid infinite loops; use clear end conditions.</li>
-                                 <li>If stuck in a loop, use Ctrl+C (or Command+C on Mac) to stop execution.</li>
-                              </ul>
-                              
-                              <h3>Part 1: File Description</h3>
-                              <p>You will work with the loanApproval files:</p>
-                              
-                              <div style="margin: 20px 0;">
-                                 <h4>loanApproval_bad.py</h4>
-                                 <p>An unethical, oversimplified system. It asks for basic info (name, age, gender, employment, address) and makes decisions based on discriminatory or irrelevant criteria. It demonstrates what not to do.</p>
-                              </div>
-                              
-                              <div style="margin: 20px 0;">
-                                 <h4>loanApproval_mediocre.py</h4>
-                                 <p>A binary (yes/no) system. It asks about employment, job stability, income, loans, and assets, but only as yes/no questions. It lacks nuance and does not use ranges or point systems.</p>
-                              </div>
-                              
-                              <div style="margin: 20px 0;">
-                                 <h4>loanApproval_better.py</h4>
-                                 <p>Uses ranges and collects more detailed info. It asks for specific amounts for income, debts, and assets, storing them in arrays. It uses loops and input validation, but still has room for improvement in precision and fairness.</p>
-                              </div>
-                              
-                              <div style="margin: 20px 0;">
-                                 <h4>loanApproval_good.py</h4>
-                                 <p>Implements a points-based system. Points are added or subtracted based on salary, additional income, debts, and property value, using thresholds and ranges. The approval decision is based on the total score.</p>
-                              </div>
-                              
-                              <p>You will review and modify these files, improving the criteria and logic for loan approval. The code should use variables for job stability, monthly income, previous loans, outstanding debts, and property value, with each factor affecting the approval score. The program should print the approval status and points, and include comments explaining your choices.</p>
-                              
-                              <h3>Part 2: Reflection</h3>
-                              <p>For the last part of this assignment you will write a short reflection (~1 page), going over your thought process working through the assignment, areas of strength and weaknesses, and 1 paragraph reflecting on the ethical considerations of your program and how the choices you made with your algorithm reflect those choices. As a programmer, try to be conscious of all the assumptions you are making about the user for your program. You are free to include potential areas of improvement for making your algorithm more encompassing or fair as well in that paragraph. While this reflection will not be graded for writing quality, please try to use at least a semi-formal writing style and tone. This is an essential part of the assignment so please don't forget to include it in your submissions.</p>
-                              
-                              <h3>Grading Rubric</h3>
-                              <table style="border-collapse: collapse; width: 100%; margin: 20px 0;">
-                                 <tr style="background-color: #f0f0f0;">
-                                    <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Criteria</th>
-                                    <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Proficient</th>
-                                    <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Exemplary</th>
-                                 </tr>
-                                 <tr>
-                                    <td style="border: 1px solid #ddd; padding: 12px; font-weight: bold;">Logic</td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Passes all of the pytests</li>
-                                          <li>Uses while loops and for loops in appropriate areas</li>
-                                          <li>Uses if and elif and else in appropriate areas</li>
-                                       </ul>
-                                    </td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Meets all the Proficient requirements</li>
-                                          <li>No unnecessary/extraneous code</li>
-                                          <li>Removed commented out code</li>
-                                       </ul>
-                                    </td>
-                                 </tr>
-                                 <tr style="background-color: #f9f9f9;">
-                                    <td style="border: 1px solid #ddd; padding: 12px; font-weight: bold;">Style</td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Passes pylint</li>
-                                          <li>Has comments</li>
-                                          <li>Variable names are relevant to the code</li>
-                                          <li>The questions and error messages being asked of the users indicate what response is being desired</li>
-                                          <li><em>Ex: How much debt do you have? :</em></li>
-                                       </ul>
-                                    </td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Meets all the Proficient requirements</li>
-                                          <li>Comments are descriptive and help improve legibility of the code</li>
-                                          <li>The questions and error messages are clear and explicit</li>
-                                          <li>Currency of the response is clarified</li>
-                                          <li>The sources of income or debt are specified</li>
-                                          <li>Error messages specify what is needed (positive numerical value)</li>
-                                          <li><em>Ex: Enter your cost of debt for {source} (USD):</em></li>
-                                       </ul>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td style="border: 1px solid #ddd; padding: 12px; font-weight: bold;">Reflection</td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>The student responded to all of the required questions</li>
-                                          <li>Responses are written in complete sentences</li>
-                                          <li>The responses meet the length requirements</li>
-                                       </ul>
-                                    </td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Meets all the Proficient requirements</li>
-                                          <li>The responses are thoughtful and clear in their connections</li>
-                                          <li>There is a clear structure to the answers and they are coherent when read</li>
-                                       </ul>
-                                    </td>
-                                 </tr>
-                              </table>
+                        <h2 style="font-weight: bold;">Working with Functions</h2>
+                        <p>The following assignment and in-class activities allow students to practice the technical skill of working with datasets in Python. Throughout, they also reflect on data privacy, the limitations of data, and the responsibilities programmers have when working with data. We chose this technical skill because it was one of our favorites when taking Introduction to Computer Science classes, and we believe it is relevant for students who may not be majoring in Computer Science.</p>
+                        
+                        <hr style="margin: 20px 0;">
 
-                              <hr />
+                     
+                        <h3>Functions Assignment: Online Shopping Simulator</h3>
+                        <article class="line">
+                           
+                           <p>In the take-home assignment, create a simple online shopping simulator using functions to handle various tasks such as purchasing items, calculating totals, and applying discounts.
+                           The students will use a dataset, formatted in a csv file, that contains product information including names, prices, categorys, and whether a payment plan is available. The dataset is synthethic created from prompting
+                           Gemini with "Can you create a CSV that has a list of about 100 of the most purchased items on Amazon with their prices and if they have a payment plan available?".
+                           The dataset is simple enough for student to undetstand while still exposing them to files with mutliple data types and substantial amounts of data.
+                           The assignment is divided into 5 parts: purchase, offer products, payment plans, discounts, and simulation. This structure allows students to build on their skills, letting them begin working with modular code and build up functions over time.
+                           <br>
+                           Using online shoppoing data allowed us to highlight real world issues related to addictive algorithm design and over consumption. We ask students to reflect on their choices in designing their program throughout the assignment, and how technical choices can have real world effects on potential users.
+                           </p>
+                           <div style="height: 0.5em;"></div>
+                           <a href="assets\functions\Functions_Assignment.pdf" target="_blank" rel="noopener" title="Functions Assignment (PDF)">Functions Assignment (PDF)</a>
+                           <br>
+                           <br>
+                           <h3>Solutions and Test Suite </h3>
+                           <p>Access the assignment solution code, rubric, test suite and instructions for running the tests below.</p>
+                           <p>Test suites use the same framework across assignments, learn more about our framework <a href="test-suite.html">here</a>.</p>
+                           <div style="height: 0.5em;"></div>
+                           <a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/datasets/solution_code/solution.py" target="_blank" rel="noopener" title="Solution Code">Solution Code</a> <br>
+                           <a href="assets\data\Functions_Rubric.pdf" target="_blank" rel="noopener" title="Rubric">Rubric (PDF)</a> <br>
+                           <a href="https://github.com/ryanc0322/Fall2025-COMPS/tree/main/datasets/tests" target="_blank" rel="noopener" title="Test Suite">Test Suite</a>
+                           <p>To run the test suite, use the command: <code>python run_tests_healthcare.py</code>.</p>
+                           <p>See <a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/datasets/tests/run_tests_instructions.txt" target="_blank" rel="noopener" title="commands">run_tests_instructions.txt</a> for individual pytest, coverage and pylint commands.</p>
 
-                              <h1>In Class Assignment</h1>
+                           <br>
+                           <h3>In-Class Activities</h3>
+                           <p>
+                           The lecture material and in-class activities introduce technical skills for working with datasets in a similar way to the take-home assignment.
+                           Students first practice these skills during class and then apply them independently in the assignment, allowing repetition to reinforce their learning.
+                           The class material uses data from the <a href="https://covidtracking.com/ " target="_blank" rel="noopener" title="COVID Tracking Project">COVID Tracking Project</a>.
+                           <br>
+                           <div style="height: 0.5em;"></div>
+                           Throughout the week, students reflect on the limitations of data, similar to their assignment, and how choices we make affect data interpretation. On the first day, students explore the dataset in two ways: (1) by visiting the COVID Tracking Project website to read about the dataset and learn about how race data is inconsistently reported, and (2) by using Python to print and inspect different parts of the dataset. This helps students begin thinking about the limitations of real-world data. 
+                           On the second and third days, students look at different misleading data visualizations, prompting them to reflect on the responsibility we have to represent data accurately.
+                           <br>
+                           <div style="height: 0.5em;"></div>
+                           We selected a worksheet for the first day because, in our experience, it’s helpful to be able to draw when conceptualizing lists and indexing. The lab on the second day gives students hands-on coding practice and builds confidence for their take-home assignment. Finally, the gallery walk on the last day promotes collaboration and gives variety to discussion. 
 
-                              <h3>Learning Objectives</h3>
-                              <p>Understand and apply:</p>
-                              <ul>
-                                 <li>Conditional statements (if, elif, else)</li>
-                                 <li>Comparison and logical operators</li>
-                                 <li>For and while loops</li>
-                                 <li>Loop control (break, continue, else)</li>
-                                 <li>Input validation and user interaction</li>
-                                 <li>Writing clear, fair, and non-biased code</li>
-                              </ul>
-
-                              <h3>File Descriptions</h3>
-
-                              <div style="margin: 20px 0;">
-                                 <h4>(conditionals.py)</h4>
-                                 <p>Demonstrates the use of conditional statements, such as if, elif, and else statements.</p>
-                                 <p><strong>Content:</strong></p>
-                                 <ul>
-                                    <li>Simple conditions (e.g., temperature check)</li>
-                                    <li>If-else for eligibility (e.g., voting age)</li>
-                                    <li>If-elif-else chains (e.g., grading)</li>
-                                    <li>Reflection prompts on fairness and bias in the context of using conditional logic</li>
-                                    <li>Activities for classifying numbers, age categories, and weather with health advice</li>
-                                    <li>Introduces comparison and logical operators (and, or), and nested conditions.</li>
-                                 </ul>
-                              </div>
-
-                              <div style="margin: 20px 0;">
-                                 <h4>(loops.py)</h4>
-                                 <p>Demonstrates the use of for and while loops.</p>
-                                 <p><strong>Content:</strong></p>
-                                 <ul>
-                                    <li>For loops for counting, iterating lists, and summing integers</li>
-                                    <li>Reflection on the impact of automation and fairness in loops</li>
-                                    <li>Activities for practicing for loops (number ranges, list iteration, summing, even numbers)</li>
-                                    <li>While loops for countdowns, input validation, and condition-based repetition</li>
-                                    <li>Discussion of infinite loops and safe loop termination</li>
-                                 </ul>
-                              </div>
-
-                              <div style="margin: 20px 0;">
-                                 <h4>(loops_conditionals_worksheet.py)</h4>
-                                 <p>Provides practice problems combining loops and conditionals.</p>
-                                 <p><strong>Includes:</strong></p>
-                                 <ul>
-                                    <li>Basic conditional exercises (positive/negative/zero, age categories, even/odd, password check, etc.)</li>
-                                    <li>Basic loop exercises (counting, even numbers, multiplication tables, countdowns)</li>
-                                    <li>Designed for hands-on practice and reinforcing concepts from the other files.</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
+                           </p>
+                           <div style="height: 0.5em;"></div>
+                           <a href="assets/data/Class_Materials.pdf" target="_blank" rel="noopener" title="Lecture Notes and In-Class Activities">Lecture Notes and In-Class Activities (PDF)</a>
+                           <br>
+                           <a href="assets/data/Worksheet.pdf" target="_blank" rel="noopener" title="Day 1: Worksheet (PDF)">Day 1: Worksheet (PDF)</a>
+                           <br>
+                           <a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/C_data/inclass_activities/day2_covid_lab.py" target="_blank" rel="noopener" title="Day 2 COVID Lab (Code)">Day 2: Lab (Code)</a>
+                           <br>
+                           <a href="assets/data/Gallery_Walk.pdf" target="_blank" rel="noopener" title="Day 3: Gallery Walk (Slides)">Day 3: Gallery Walk (Slides)</a>
+                        </article>
                      </section>
                   </div>
                </div>
