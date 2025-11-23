@@ -36,199 +36,76 @@
             <!-- RIGHT COLUMN -->   
             <div class="s-12 m-8 l-9 content-col">
                <div class="box">
-                  <!-- HEADER -->     
+
                   <div class="line">
                      <section>
-                        <div class="margin">
-                           <div class="s-12 margin-bottom">
-                              <h1>Take Home Assignment</h1>
-                              <p>
-                                 <a href="https://github.com/ryanc0322/Fall2025-COMPS.git" target="_blank" rel="noopener" title="Github Repo Link">Link to Assignment</a>
-                              </p>
-                              <h2>Conditionals and Loops</h2>
-                              
-                              <h3>Learning Objectives</h3>
-                              <p>Practice and reinforce knowledge of:</p>
+                        <h2 style="font-weight: bold;">Working with Conditionals & Loops</h2>
+                        <p>The following assignment and in-class activities allow students to practice the technical skill of working with conditionals and loops in Python. Throughout, they also reflect on asking relevant questions when lending loan, and how to format / save them in an appropriate way. We chose this technical skill because it was one of our favorites when taking Introduction to Computer Science classes, and we believe it is relevant for students who may not be majoring in Computer Science.</p>
+                        
+                        <hr style="margin: 20px 0;">
+
+                     
+                        <h3>Conditionals and Loops Assignment: Loan Approval System</h3>
+                        <article class="line">
+                           
+                           <p>In the take-home assignment, students will work with four different loan approval systems: 
+                           <br>
+                           <br>
                               <ul>
-                                 <li>Type usage</li>
-                                 <li>Good programming practice</li>
-                                 <li>Conditionals (if/else)</li>
-                                 <li>Loops (for/while)</li>
-                                 <li>Booleans and logical operators (&lt;, &gt;, ==, !=)</li>
-                                 <li>Loop iteration and control (break/continue/else)</li>
+                                 <li><a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/conditionals/StudentFacing/loanApproval_bad.py">loanApproval_bad.py</a></li>
+                                 <li><a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/conditionals/StudentFacing/loanApproval_mediocre.py">loanApproval_mediocre.py</a></li>
+                                 <li><a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/conditionals/StudentFacing/loanApproval_better.py">loanApproval_better.py</a></li>
+                                 <li><a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/conditionals/StudentFacing/loanApproval_good.py">loanApproval_good.py</a></li>
                               </ul>
-                              
-                              <h3>Part 0: Set-Up & Introduction</h3>
-                              <p>For this assignment, you will implement ideas discussed in class using conditionals and loops. You are a loan manager automating the loan approval process. You will design a point system based on applicant information such as employment, income, debts, and assets. Some starter code is provided, including both ethical and unethical examples.</p>
-                              
-                              <p>Starter code includes functions for input validation, loops, and conditionals. You will:</p>
-                              <ul>
-                                 <li>Implement and refine input functions for applicant data.</li>
-                                 <li>Use loops and conditionals to validate and process input.</li>
-                                 <li>Design a point system that fairly evaluates applicants.</li>
-                                 <li>Add comments explaining your logic and ethical considerations.</li>
-                              </ul>
-                              
-                              <h4>Notes and Advice</h4>
-                              <ul>
-                                 <li>Use appropriate conditionals and logical operators for thresholds and binary choices.</li>
-                                 <li>Use loops for repeated input and validation.</li>
-                                 <li>Use loop control statements (break, continue, else) to manage flow.</li>
-                                 <li>Print variables for debugging as needed.</li>
-                                 <li>Avoid infinite loops; use clear end conditions.</li>
-                                 <li>If stuck in a loop, use Ctrl+C (or Command+C on Mac) to stop execution.</li>
-                              </ul>
-                              
-                              <h3>Part 1: File Description</h3>
-                              <p>You will work with the loanApproval files:</p>
-                              
-                              <div style="margin: 20px 0;">
-                                 <h4>loanApproval_bad.py</h4>
-                                 <p>An unethical, oversimplified system. It asks for basic info (name, age, gender, employment, address) and makes decisions based on discriminatory or irrelevant criteria. It demonstrates what not to do.</p>
-                              </div>
-                              
-                              <div style="margin: 20px 0;">
-                                 <h4>loanApproval_mediocre.py</h4>
-                                 <p>A binary (yes/no) system. It asks about employment, job stability, income, loans, and assets, but only as yes/no questions. It lacks nuance and does not use ranges or point systems.</p>
-                              </div>
-                              
-                              <div style="margin: 20px 0;">
-                                 <h4>loanApproval_better.py</h4>
-                                 <p>Uses ranges and collects more detailed info. It asks for specific amounts for income, debts, and assets, storing them in arrays. It uses loops and input validation, but still has room for improvement in precision and fairness.</p>
-                              </div>
-                              
-                              <div style="margin: 20px 0;">
-                                 <h4>loanApproval_good.py</h4>
-                                 <p>Implements a points-based system. Points are added or subtracted based on salary, additional income, debts, and property value, using thresholds and ranges. The approval decision is based on the total score.</p>
-                              </div>
-                              
-                              <p>You will review and modify these files, improving the criteria and logic for loan approval. The code should use variables for job stability, monthly income, previous loans, outstanding debts, and property value, with each factor affecting the approval score. The program should print the approval status and points, and include comments explaining your choices.</p>
-                              
-                              <h3>Part 2: Reflection</h3>
-                              <p>For the last part of this assignment you will write a short reflection (~1 page), going over your thought process working through the assignment, areas of strength and weaknesses, and 1 paragraph reflecting on the ethical considerations of your program and how the choices you made with your algorithm reflect those choices. As a programmer, try to be conscious of all the assumptions you are making about the user for your program. You are free to include potential areas of improvement for making your algorithm more encompassing or fair as well in that paragraph. While this reflection will not be graded for writing quality, please try to use at least a semi-formal writing style and tone. This is an essential part of the assignment so please don't forget to include it in your submissions.</p>
-                              
-                              <h3>Grading Rubric</h3>
-                              <table style="border-collapse: collapse; width: 100%; margin: 20px 0;">
-                                 <tr style="background-color: #f0f0f0;">
-                                    <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Criteria</th>
-                                    <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Proficient</th>
-                                    <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Exemplary</th>
-                                 </tr>
-                                 <tr>
-                                    <td style="border: 1px solid #ddd; padding: 12px; font-weight: bold;">Logic</td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Passes all of the pytests</li>
-                                          <li>Uses while loops and for loops in appropriate areas</li>
-                                          <li>Uses if and elif and else in appropriate areas</li>
-                                       </ul>
-                                    </td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Meets all the Proficient requirements</li>
-                                          <li>No unnecessary/extraneous code</li>
-                                          <li>Removed commented out code</li>
-                                       </ul>
-                                    </td>
-                                 </tr>
-                                 <tr style="background-color: #f9f9f9;">
-                                    <td style="border: 1px solid #ddd; padding: 12px; font-weight: bold;">Style</td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Passes pylint</li>
-                                          <li>Has comments</li>
-                                          <li>Variable names are relevant to the code</li>
-                                          <li>The questions and error messages being asked of the users indicate what response is being desired</li>
-                                          <li><em>Ex: How much debt do you have? :</em></li>
-                                       </ul>
-                                    </td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Meets all the Proficient requirements</li>
-                                          <li>Comments are descriptive and help improve legibility of the code</li>
-                                          <li>The questions and error messages are clear and explicit</li>
-                                          <li>Currency of the response is clarified</li>
-                                          <li>The sources of income or debt are specified</li>
-                                          <li>Error messages specify what is needed (positive numerical value)</li>
-                                          <li><em>Ex: Enter your cost of debt for {source} (USD):</em></li>
-                                       </ul>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td style="border: 1px solid #ddd; padding: 12px; font-weight: bold;">Reflection</td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>The student responded to all of the required questions</li>
-                                          <li>Responses are written in complete sentences</li>
-                                          <li>The responses meet the length requirements</li>
-                                       </ul>
-                                    </td>
-                                    <td style="border: 1px solid #ddd; padding: 12px;">
-                                       <ul>
-                                          <li>Meets all the Proficient requirements</li>
-                                          <li>The responses are thoughtful and clear in their connections</li>
-                                          <li>There is a clear structure to the answers and they are coherent when read</li>
-                                       </ul>
-                                    </td>
-                                 </tr>
-                              </table>
+                           <br>
+                           The assignment is divided into 2 parts: improving the loan approval system and reflecting on ethical considerations. This structure allows students to build on their skills, beginning with coding and ending with reflection.
+                           Throughout the coding portion, students practice using conditionals and loops to validate input, process data, and make decisions. In the reflection portion, students consider the ethical implications of their code and the assumptions they made about users.
+                           There are four different loan approval systems provided, each with varying levels of complexity and ethical considerations. Students review and modify these files, improving the criteria and logic for loan approval while being mindful of fairness and bias.
+                           <br>
+                           <br>
+                           Formatting the assignment around a loan approval system allowed us to highlight real world issues related to financial accessibility and ethical algorithm design. We ask students to reflect on their choices in designing their program throughout the assignment, and how technical choices can have real world effects on potential users.
+                           </p>
+                           <div style="height: 0.5em;"></div>
+                           <a href="assets\data\LoanApproval_Assignment.pdf" target="_blank" rel="noopener" title="Loan Approval Assignment (PDF)">Loan Approval Assignment (PDF)</a>
+                           <br>
+                           <br>
+                           <h3>Solutions and Test Suite </h3>
+                           <p>Access the assignment solution code, rubric, test suite and instructions for running the tests below.</p>
+                           <p>Test suites use the same framework across assignments, learn more about our framework <a href="test-suite.html">here</a>.</p>
+                           <div style="height: 0.5em;"></div>
+                           <ul>
+                              <li><a href="https://github.com/ryanc0322/Fall2025-COMPS/tree/main/conditionals/ProductionCode" target="_blank" rel="noopener" title="Solution Code">Solution Code</a> <br></li>
+                              <li><a href="assets\data\Loan_Rubric.pdf" target="_blank" rel="noopener" title="Rubric">Rubric (PDF)</a> <br></li>
+                              <li><a href="https://github.com/ryanc0322/Fall2025-COMPS/tree/main/conditionals/Tests" target="_blank" rel="noopener" title="Test Suite">Test Suite</a></li>
+                           </ul>
+                           <p>See <a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/conditionals/Tests/run_test_instructions.txt" target="_blank" rel="noopener" title="commands">run_tests_instructions.txt</a> for individual pytest, coverage and pylint commands.</p>
 
-                              <hr />
+                           <br>
+                           <h3>In-Class Activities</h3>
+                           <p>
+                           The lecture material and in-class activities introduce technical skills for working with conditionals and loops in a similar but different way to the take-home assignment.
+                           In order to highlight different aspects of conditionals and loops, the in-class activities depart from the loan approval theme used in the assignment.
+                           The in-class activities have multiple questions and labs spread out over a week: where for each questions there are both applications to real-world scenarios and technical coding practice.
+                           With different scenarios and applications, students are able to see the versatility of conditionals and loops in programming.
 
-                              <h1>In Class Assignment</h1>
+                           <br>
+                           <div style="height: 0.5em;"></div>
+                           Throughout the week, students will go through three different activities: follow-through code for conditionals, follow-through code for loops, and a final lab worksheet.
+                           The follow-through codes allow students to see examples of how conditionals and loops are used in practice, while the final lab worksheet gives students hands-on experience writing their own code.
 
-                              <h3>Learning Objectives</h3>
-                              <p>Understand and apply:</p>
-                              <ul>
-                                 <li>Conditional statements (if, elif, else)</li>
-                                 <li>Comparison and logical operators</li>
-                                 <li>For and while loops</li>
-                                 <li>Loop control (break, continue, else)</li>
-                                 <li>Input validation and user interaction</li>
-                                 <li>Writing clear, fair, and non-biased code</li>
-                              </ul>
+                           <br>
+                           <div style="height: 0.5em;"></div>
+                           We selected a follow-through code for the first and second day because, in our experience, it’s helpful to be able to see examples of how conditionals and loops are used in practice. The lab on the third day gives students hands-on experience writing their own code. 
 
-                              <h3>File Descriptions</h3>
-
-                              <div style="margin: 20px 0;">
-                                 <h4>(conditionals.py)</h4>
-                                 <p>Demonstrates the use of conditional statements, such as if, elif, and else statements.</p>
-                                 <p><strong>Content:</strong></p>
-                                 <ul>
-                                    <li>Simple conditions (e.g., temperature check)</li>
-                                    <li>If-else for eligibility (e.g., voting age)</li>
-                                    <li>If-elif-else chains (e.g., grading)</li>
-                                    <li>Reflection prompts on fairness and bias in the context of using conditional logic</li>
-                                    <li>Activities for classifying numbers, age categories, and weather with health advice</li>
-                                    <li>Introduces comparison and logical operators (and, or), and nested conditions.</li>
-                                 </ul>
-                              </div>
-
-                              <div style="margin: 20px 0;">
-                                 <h4>(loops.py)</h4>
-                                 <p>Demonstrates the use of for and while loops.</p>
-                                 <p><strong>Content:</strong></p>
-                                 <ul>
-                                    <li>For loops for counting, iterating lists, and summing integers</li>
-                                    <li>Reflection on the impact of automation and fairness in loops</li>
-                                    <li>Activities for practicing for loops (number ranges, list iteration, summing, even numbers)</li>
-                                    <li>While loops for countdowns, input validation, and condition-based repetition</li>
-                                    <li>Discussion of infinite loops and safe loop termination</li>
-                                 </ul>
-                              </div>
-
-                              <div style="margin: 20px 0;">
-                                 <h4>(loops_conditionals_worksheet.py)</h4>
-                                 <p>Provides practice problems combining loops and conditionals.</p>
-                                 <p><strong>Includes:</strong></p>
-                                 <ul>
-                                    <li>Basic conditional exercises (positive/negative/zero, age categories, even/odd, password check, etc.)</li>
-                                    <li>Basic loop exercises (counting, even numbers, multiplication tables, countdowns)</li>
-                                    <li>Designed for hands-on practice and reinforcing concepts from the other files.</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
+                           <br>
+                           </p>
+                           <div style="height: 0.5em;"></div>
+                           <ul>
+                              <li><a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/conditionals/InClass/conditionals.py" target="_blank" rel="noopener" title="Day 1: Conditionals">Day 1: Conditionals</a></li>
+                              <li><a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/conditionals/InClass/loops.py" target="_blank" rel="noopener" title="Day 2: Loops">Day 2: Loops</a></li>
+                              <li><a href="https://github.com/ryanc0322/Fall2025-COMPS/blob/main/conditionals/InClass/loops_conditionals_worksheet.py" target="_blank" rel="noopener" title="Day 3: Lab Worksheet">Day 3: Gallery Walk (Slides)</a></li>
+                           </ul>
+                        </article>
                      </section>
                   </div>
                </div>
